@@ -1,7 +1,6 @@
 /* Minimal styles: black monospaced text on white */
 body {
   margin: 2rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   background: #ffffff;
   color: #000000;
   line-height: 1.5;
