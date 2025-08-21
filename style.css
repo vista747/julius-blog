@@ -34,8 +34,8 @@ img {
 
 .site-footer {
   position: fixed;
-  bottom: 10px;
-  left: 10px;
+  bottom: 2rem;
+  left: 2rem;
   font-size: 14px;
 }
 
