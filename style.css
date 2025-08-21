@@ -35,7 +35,7 @@ img {
 .site-footer {
   position: fixed;
   bottom: 10px;
-  left: 2rem;
+  left: 10px;
   font-size: 14px;
 }
 
@@ -48,3 +48,4 @@ img {
 
 .site-footer a:hover {
   color: #0000ff;
+}
