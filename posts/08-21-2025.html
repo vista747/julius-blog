@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>example title</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1><span class="header-link" onclick="window.location='https://julius.cool'">how/why did i make this blog?</span></h1>
+  <p>
+    <small>
+      august 21, 2025 — 00:00<br>
+      track: nico niquo - blue ecco<br>
+      <span id="mute-toggle" class="mute-link">mute</span>
+    </small>
+  </p>
+  <p>
+    body text
+  </p>
+
+  <p><span class="post-link" onclick="window.location='https://julius.cool'">← back</span></p>
+
+  <audio id="music" autoplay loop>
+  <source src="audio/blue_ecco.flac" type="audio/flac">
+  </audio>
+
+  <script>
+  const audio = document.getElementById("music");
+  const muteToggle = document.getElementById("mute-toggle");
+
+  audio.volume = 0.8; // default volume
+
+  muteToggle.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      muteToggle.textContent = "mute";
+    } else {
+      audio.muted = true;
+      muteToggle.textContent = "unmute";
+    }
+  });
+</script>
+
+  <script>
+  fetch("../footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+  <div id="footer"></div>
+</body>
+</html>
