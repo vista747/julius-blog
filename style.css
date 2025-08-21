@@ -81,3 +81,12 @@ img {
 small {
   color: #666666;
 }
+
+.mute-link {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mute-link:hover {
+  color: #0000ff;
+}
