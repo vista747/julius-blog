@@ -31,3 +31,20 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.site-footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+}
+
+.site-footer a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #0000ff;
