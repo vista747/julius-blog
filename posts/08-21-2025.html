@@ -73,12 +73,32 @@
   </script>
 
   <script>
+  // inject footer from posts/
   fetch("../footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
+    .then(r => r.text())
+    .then(html => {
+      const mount = document.getElementById("footer");
+      mount.innerHTML = html;
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          document.body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+          document.getElementById("theme-toggle").textContent = "light mode";
+        } else {
+          document.body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+          document.getElementById("theme-toggle").textContent = "dark mode";
+        }
+      }
+
+      applyTheme(localStorage.getItem("theme") || "light");
+      document.getElementById("theme-toggle").addEventListener("click", () => {
+        const next = document.body.classList.contains("dark-mode") ? "light" : "dark";
+        applyTheme(next);
+      });
     });
-  </script>
-  <div id="footer"></div>
+</script>
+<div id="footer"></div>
 </body>
 </html>

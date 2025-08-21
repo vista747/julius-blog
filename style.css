@@ -1,10 +1,22 @@
+:root {
+  --bg: #fff;
+  --fg: #000;
+  --muted: #666;
+}
+
+.dark-mode {
+  --bg: #000;
+  --fg: #fff;
+  --muted: #999;
+}
+
 body {
   margin: 2rem;
-  background: #000000;
-  color: #ffffff;
+  background: var(--bg);
+  color: var(--fg);
   line-height: 1.5;
-  font-weight: normal; 
-  padding-bottom: 3rem; 
+  font-weight: normal;
+  padding-bottom: 3rem;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -13,18 +25,18 @@ strong, b {
 }
 
 a {
-  color: #ffffff;
+  color: var(--fg);
   text-decoration: none;
   transition: color 0.3s ease;  
 }
 
 a:hover {
-  color: #ff0000 !important; 
+  color: #f00 !important; 
 }
 
 hr {
   border: 0;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid var(--fg);
   margin: 1rem 0;
 }
 
@@ -36,23 +48,23 @@ img {
 .site-footer {
   position: fixed;
   bottom: 1.5rem;
-  left: 2rem 0;
+  left: 2rem;
   font-size: 14px;
 }
 
 .header-link {
-  color: #ffffff;
+  color: var(--fg);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .header-link:hover {
-  color: #ff0000; 
+  color: #f00; 
 }
 
 .footer-link {
-  color: #ffffff;
+  color: var(--fg);
   text-decoration: none;
   cursor: pointer;
   margin-right: 8px;
@@ -60,7 +72,7 @@ img {
 }
 
 .footer-link:hover {
-  color: #ff0000;
+  color: #f00;
 }
 
 .footer-link:last-child {
@@ -68,18 +80,18 @@ img {
 }
 
 .post-link {
-  color: #ffffff;
+  color: var(--fg);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .post-link:hover {
-  color: #ff0000;
+  color: #f00;
 }
 
 small {
-  color: #999999;
+  color: var(--muted);
 }
 
 .mute-link {
@@ -88,5 +100,5 @@ small {
 }
 
 .mute-link:hover {
-  color: #ff0000;
+  color: #f00;
 }
