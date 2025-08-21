@@ -40,17 +40,6 @@ img {
   font-size: 14px;
 }
 
-.site-footer a {
-  color: #000000;
-  text-decoration: none;
-  margin-right: 8px;
-  transition: color 0.3s ease;
-}
-
-.site-footer a:hover {
-  color: #0000ff;
-}
-
 .header-link {
   color: #000000;
   text-decoration: none;
