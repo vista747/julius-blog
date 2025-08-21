@@ -27,10 +27,20 @@
 
   <script>
   const audio = document.getElementById("music");
-  const muteToggle = document.getElementById("mute-toggle");
-
   audio.volume = 0.8; // default volume
 
+  // Try autoplay immediately
+  audio.play().catch(() => {
+    // If it fails (autoplay blocked), wait for first click
+    document.body.addEventListener("click", startAudio, { once: true });
+  });
+
+  function startAudio() {
+    audio.play();
+  }
+
+  // Mute/unmute toggle
+  const muteToggle = document.getElementById("mute-toggle");
   muteToggle.addEventListener("click", () => {
     if (audio.muted) {
       audio.muted = false;
@@ -40,7 +50,7 @@
       muteToggle.textContent = "unmute";
     }
   });
-</script>
+  </script>
 
   <script>
   fetch("../footer.html")
