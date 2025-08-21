@@ -16,5 +16,20 @@
   <ul>
     <li><a href="posts/myfirstpost.html">my first post</a> <small>— August 20, 2025 | 19:43</small></li>
   </ul>
+  <script>
+  function toggleContact(e) {
+    e.preventDefault(); // stop page from jumping
+    const toggle = document.getElementById("contact-toggle");
+    const dropdown = document.getElementById("contact-dropdown");
+
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+      toggle.textContent = "Contact →";
+    } else {
+      dropdown.style.display = "block";
+      toggle.textContent = "Contact ↓";
+    }
+  }
+</script>
 </body>
 </html>
