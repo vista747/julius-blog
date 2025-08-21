@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #0000ff !important; 
+  color: #ff0000 !important; 
 }
 
 hr {
@@ -48,7 +48,7 @@ img {
 }
 
 .header-link:hover {
-  color: #0000ff; 
+  color: #ff0000; 
 }
 
 .footer-link {
@@ -60,7 +60,7 @@ img {
 }
 
 .footer-link:hover {
-  color: #0000ff;
+  color: #ff0000;
 }
 
 .footer-link:last-child {
@@ -75,7 +75,7 @@ img {
 }
 
 .post-link:hover {
-  color: #0000ff;
+  color: #ff0000;
 }
 
 small {
@@ -88,5 +88,5 @@ small {
 }
 
 .mute-link:hover {
-  color: #0000ff;
+  color: #ff0000;
 }
