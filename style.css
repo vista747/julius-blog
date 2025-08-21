@@ -50,3 +50,14 @@ img {
 .site-footer a:hover {
   color: #0000ff;
 }
+
+.header-link {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-link:hover {
+  color: #0000ff; 
+}
