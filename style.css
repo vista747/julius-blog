@@ -1,7 +1,7 @@
 body {
   margin: 2rem;
-  background: #ffffff;
-  color: #000000;
+  background: #000000;
+  color: #ffffff;
   line-height: 1.5;
   font-weight: normal; 
   padding-bottom: 3rem; 
@@ -13,7 +13,7 @@ strong, b {
 }
 
 a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;  
 }
@@ -24,7 +24,7 @@ a:hover {
 
 hr {
   border: 0;
-  border-top: 1px solid #000000;
+  border-top: 1px solid #ffffff;
   margin: 1rem 0;
 }
 
@@ -41,7 +41,7 @@ img {
 }
 
 .header-link {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -52,7 +52,7 @@ img {
 }
 
 .footer-link {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   margin-right: 8px;
@@ -68,7 +68,7 @@ img {
 }
 
 .post-link {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -79,7 +79,7 @@ img {
 }
 
 small {
-  color: #666666;
+  color: #999999;
 }
 
 .mute-link {
