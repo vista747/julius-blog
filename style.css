@@ -102,3 +102,12 @@ small {
 .mute-link:hover {
   color: #f00;
 }
+
+body, 
+a, 
+.header-link, 
+.footer-link, 
+.post-link, 
+small {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
