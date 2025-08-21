@@ -19,8 +19,7 @@
 
 <body>
   <h1><span class="header-link" onclick="window.location='https://julius.cool'">julius.cool</span></h1>
-
-  <!-- Add a new <li> for each post -->
+  <p><small id="live-clock"></small></p>
   <div>
     <span class="post-link" onclick="window.location='posts/08-21-2025.html'">repurposing this blog</span> <small>— august 21, 2025 — 03:49</small>
   </div>
@@ -31,14 +30,12 @@
     <span class="post-link" onclick="window.location='posts/08-20-2025.html'">my first blog post</span> <small>— august 20, 2025 — 19:43</small>
   </div>
   <script>
-  // inject footer from root
   fetch("./footer.html")
     .then(r => r.text())
     .then(html => {
       const mount = document.getElementById("footer");
       mount.innerHTML = html;
 
-      // theme helpers
       function applyTheme(theme) {
         if (theme === "dark") {
           document.documentElement.classList.add("dark-mode");
@@ -51,7 +48,6 @@
         }
       }
 
-      // apply saved theme & wire up toggle
       applyTheme(localStorage.getItem("theme") || "light");
       document.getElementById("theme-toggle").addEventListener("click", () => {
         const next = document.documentElement.classList.contains("dark-mode") ? "light" : "dark";
@@ -60,5 +56,23 @@
     });
 </script>
 <div id="footer"></div>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const weekday = now.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
+  const month   = now.toLocaleDateString('en-US', { month: 'long' }).toLowerCase();
+  const day     = now.getDate();
+  const year    = now.getFullYear();
+  const hours   = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const formatted = `${weekday}, ${month} ${day}, ${year} — ${hours}:${minutes}:${seconds}`;
+  document.getElementById("live-clock").textContent = formatted;
+}
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+
 </body>
 </html>
