@@ -61,3 +61,19 @@ img {
 .header-link:hover {
   color: #0000ff; 
 }
+
+.footer-link {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #0000ff;
+}
+
+.footer-link:last-child {
+  margin-right: 0;
+}
