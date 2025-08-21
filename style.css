@@ -7,10 +7,6 @@ body {
   padding-bottom: 3rem; /* <-- add this */
 }
 
-small {
-  color: #777777;
-}
-
 h1, h2, h3, h4, h5, h6,
 strong, b {
   font-weight: normal;
@@ -80,4 +76,8 @@ img {
 
 .post-link:hover {
   color: #0000ff;
+}
+
+small {
+  color: #777777;
 }
