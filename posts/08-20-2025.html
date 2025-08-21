@@ -14,12 +14,13 @@
   </p>
 
   <p><span class="post-link" onclick="window.location='https://julius.cool'">← back</span></p>
-   <footer class="site-footer">
-  <span class="footer-link" onclick="window.open('https://bandcamp.com/juliusuc','_blank')">bandcamp  </span>
-  <span class="footer-link" onclick="window.open('https://instagram.com/jucafiso','_blank')">instagram  </span>
-  <span class="footer-link" onclick="window.open('https://discord.gg/TZNXMAgpyx','_blank')">discord  </span>
-  <span class="footer-link" onclick="window.open('https://github.com/vista747','_blank')">github  </span>
-  <span class="footer-link" onclick="window.location='mailto:julius@julius.cool'">contact</span>
-</footer>
+  <script>
+  fetch("../footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+  <div id="footer"></div>
 </body>
 </html>
