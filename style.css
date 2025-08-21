@@ -66,3 +66,14 @@ img {
 .footer-link:last-child {
   margin-right: 0;
 }
+
+.post-link {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.post-link:hover {
+  color: #0000ff;
+}
