@@ -37,7 +37,7 @@ function loadFooter(path) {
         themeToggle.addEventListener("click", () => {
           const next = document.documentElement.classList.contains("dark-mode") ? "light" : "dark";
           applyTheme(next);
-          setTimeout(adjustFooterMode, 0); // re-evaluate after layout settles
+          setTimeout(adjustFooterMode, 0);
         });
       }
 
@@ -50,26 +50,45 @@ function loadFooter(path) {
         const viewportHeight = window.innerHeight;
 
         if (pageHeight > viewportHeight) {
-          // long page → footer at bottom of document flow
           footer.classList.remove("fixed");
           footer.classList.add("static");
         } else {
-          // short page → footer fixed to the screen bottom
           footer.classList.remove("static");
           footer.classList.add("fixed");
         }
       }
 
-      // === Email dropdown ===
+      // === Email + Phone dropdowns (only one open at a time, close first) ===
       const emailToggle   = document.getElementById("email-toggle");
       const emailDropdown = document.getElementById("email-dropdown");
       const copyBtn       = document.getElementById("copy-btn");
       const emailAddr     = document.getElementById("email-address");
 
+      const phoneToggle   = document.getElementById("phone-toggle");
+      const phoneDropdown = document.getElementById("phone-dropdown");
+      const phoneCopyBtn  = document.getElementById("phone-copy-btn");
+      const phoneNumber   = document.getElementById("phone-number");
+
       if (emailToggle && emailDropdown) {
         emailToggle.addEventListener("click", () => {
+          // always close phone first
+          if (phoneDropdown) phoneDropdown.classList.remove("show");
+
+          // then toggle email
           emailDropdown.classList.toggle("show");
-          // dropdown might change page height → re-evaluate
+
+          setTimeout(adjustFooterMode, 320);
+        });
+      }
+
+      if (phoneToggle && phoneDropdown) {
+        phoneToggle.addEventListener("click", () => {
+          // always close email first
+          if (emailDropdown) emailDropdown.classList.remove("show");
+
+          // then toggle phone
+          phoneDropdown.classList.toggle("show");
+
           setTimeout(adjustFooterMode, 320);
         });
       }
@@ -81,19 +100,6 @@ function loadFooter(path) {
             copyBtn.textContent = "copied!";
             setTimeout(() => (copyBtn.textContent = oldText), 1500);
           });
-        });
-      }
-
-      // === Phone dropdown ===
-      const phoneToggle   = document.getElementById("phone-toggle");
-      const phoneDropdown = document.getElementById("phone-dropdown");
-      const phoneCopyBtn  = document.getElementById("phone-copy-btn");
-      const phoneNumber   = document.getElementById("phone-number");
-
-      if (phoneToggle && phoneDropdown) {
-        phoneToggle.addEventListener("click", () => {
-          phoneDropdown.classList.toggle("show");
-          setTimeout(adjustFooterMode, 320);
         });
       }
 

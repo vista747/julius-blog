@@ -45,7 +45,6 @@ img {
   height: auto;
 }
 
-/* Base footer (no position here; mode classes below control it) */
 .site-footer {
   left: 2rem;
   right: 2rem;
