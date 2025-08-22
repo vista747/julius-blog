@@ -16,10 +16,10 @@ body {
   color: var(--fg);
   line-height: 1.5;
   font-weight: normal;
-  padding-bottom: 3rem;
+  padding-bottom: 0; /* small breathing room; footer mode handles overlap */
 }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4, h5, h6, p,
 strong, b {
   font-weight: normal;
 }
@@ -45,15 +45,27 @@ img {
   height: auto;
 }
 
+/* Base footer (no position here; mode classes below control it) */
 .site-footer {
-  position: fixed;
-  bottom: 1.5rem;
   left: 2rem;
   right: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   font-size: 14px;
+  z-index: 9999;
+}
+
+/* Footer fixed at bottom of the screen (for short pages) */
+.site-footer.fixed {
+  position: fixed;
+  bottom: 1.5rem;
+}
+
+/* Footer at bottom of the document flow (for long pages) */
+.site-footer.static {
+  position: static;
+  margin-top: 2rem; /* small gap from content when it's in flow */
 }
 
 .header-link {
@@ -107,6 +119,7 @@ small {
   color: #00f;
 }
 
+/* smooth theme transition for common elements */
 body, 
 a, 
 .header-link, 
@@ -116,6 +129,7 @@ small {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* email dropdown */
 .email-dropdown {
   opacity: 0;
   max-height: 0;
@@ -132,6 +146,7 @@ small {
   color: var(--fg);
 }
 
+/* phone dropdown */
 .phone-dropdown {
   opacity: 0;
   max-height: 0;
@@ -148,20 +163,13 @@ small {
   color: var(--fg);
 }
 
-#copy-btn {
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-#copy-btn:hover {
-  color: #00f; /* fade to blue on hover */
-}
-
+#copy-btn,
 #phone-copy-btn {
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
+#copy-btn:hover,
 #phone-copy-btn:hover {
   color: #00f; /* fade to blue on hover */
 }
