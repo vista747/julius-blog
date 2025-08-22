@@ -49,6 +49,10 @@ img {
   position: fixed;
   bottom: 1.5rem;
   left: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   font-size: 14px;
 }
 
@@ -110,4 +114,29 @@ a,
 .post-link, 
 small {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.email-dropdown {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.email-dropdown.show {
+  opacity: 1;
+  max-height: 100px; /* enough to fit content */
+}
+
+#email-address {
+  color: var(--fg);
+}
+
+#copy-btn {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#copy-btn:hover {
+  color: #f00; /* fade to red on hover */
 }

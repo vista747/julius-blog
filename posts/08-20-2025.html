@@ -60,33 +60,10 @@
   });
   </script>
 
-  <script>
-  // inject footer from posts/
-  fetch("../footer.html")
-    .then(r => r.text())
-    .then(html => {
-      const mount = document.getElementById("footer");
-      mount.innerHTML = html;
-
-      function applyTheme(theme) {
-        if (theme === "dark") {
-          document.documentElement.classList.add("dark-mode");
-          localStorage.setItem("theme", "dark");
-          document.getElementById("theme-toggle").textContent = "light";
-        } else {
-          document.documentElement.classList.remove("dark-mode");
-          localStorage.setItem("theme", "light");
-          document.getElementById("theme-toggle").textContent = "dark";
-        }
-      }
-
-      applyTheme(localStorage.getItem("theme") || "light");
-      document.getElementById("theme-toggle").addEventListener("click", () => {
-        const next = document.documentElement.classList.contains("dark-mode") ? "light" : "dark";
-        applyTheme(next);
-      });
-    });
-</script>
   <div id="footer"></div>
+<script src="./footer.js"></script>
+<script>
+  loadFooter("./footer.html");
+</script>
 </body>
 </html>
