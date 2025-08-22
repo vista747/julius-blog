@@ -1,12 +1,12 @@
 :root {
-  --bg: #fff;
-  --fg: #000;
+  --bg: #ccc;
+  --fg: #111;
   --muted: #666;
 }
 
 .dark-mode {
-  --bg: #000;
-  --fg: #fff;
+  --bg: #111;
+  --fg: #ccc;
   --muted: #999;
 }
 
@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-  color: #f00 !important; 
+  color: #00f !important; 
 }
 
 hr {
@@ -64,7 +64,7 @@ img {
 }
 
 .header-link:hover {
-  color: #f00; 
+  color: #00f; 
 }
 
 .footer-link {
@@ -76,7 +76,7 @@ img {
 }
 
 .footer-link:hover {
-  color: #f00;
+  color: #00f;
 }
 
 .footer-link:last-child {
@@ -91,7 +91,7 @@ img {
 }
 
 .post-link:hover {
-  color: #f00;
+  color: #00f;
 }
 
 small {
@@ -104,7 +104,7 @@ small {
 }
 
 .mute-link:hover {
-  color: #f00;
+  color: #00f;
 }
 
 body, 
@@ -138,5 +138,5 @@ small {
 }
 
 #copy-btn:hover {
-  color: #f00; /* fade to red on hover */
+  color: #00f; /* fade to orange on hover */
 }
