@@ -132,11 +132,36 @@ small {
   color: var(--fg);
 }
 
+.phone-dropdown {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.phone-dropdown.show {
+  opacity: 1;
+  max-height: 100px; /* enough to fit content */
+}
+
+#phone-number {
+  color: var(--fg);
+}
+
 #copy-btn {
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 #copy-btn:hover {
-  color: #00f; /* fade to orange on hover */
+  color: #00f; /* fade to blue on hover */
+}
+
+#phone-copy-btn {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#phone-copy-btn:hover {
+  color: #00f; /* fade to blue on hover */
 }

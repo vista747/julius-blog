@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>site playlist — julius.cool</title>
+
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1><span class="header-link" onclick="window.location='https://julius.cool'">site playlist</span></h1>
+  <p><small id="live-clock"></small></p>
+  <p>
+    chino yoshio - 193193 sleep<br>
+    <small><span class="mute-link" onclick="window.location='https://julius.cool/posts/audio/193193_sleep.flac'">download</span></small><br>
+    nico niquo - blue ecco<br>
+    <small><span class="mute-link" onclick="window.location='https://julius.cool/posts/audio/blue_ecco.flac'">download</span></small><br>
+    lars - balanca essa bunda<br>
+    <small><span class="mute-link" onclick="window.location='https://julius.cool/posts/audio/balanca_essa_bunda.flac'">download</span></small><br>
+    vegyn - i've been going insane [129 bpm]<br>
+    <small><span class="mute-link" onclick="window.location='https://julius.cool/posts/audio/ive_been_going_insane.flac'">download</span></small><br>
+  </p>
+  <p><span class="post-link" onclick="window.location='https://julius.cool'">← back</span></p>
+  <div id="footer"></div>
+<script src="./footer.js"></script>
+<script>
+  loadFooter("./footer.html");
+</script>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const weekday = now.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
+  const month   = now.toLocaleDateString('en-US', { month: 'long' }).toLowerCase();
+  const day     = now.getDate();
+  const year    = now.getFullYear();
+  const hours   = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const formatted = `${weekday}, ${month} ${day}, ${year} — ${hours}:${minutes}:${seconds}`;
+  document.getElementById("live-clock").textContent = formatted;
+}
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>

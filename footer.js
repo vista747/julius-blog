@@ -43,5 +43,22 @@ function loadFooter(path) {
           setTimeout(() => (copyBtn.textContent = oldText), 1500);
         });
       });
+ // === Phone dropdown ===
+      const phoneToggle = document.getElementById("phone-toggle");
+      const phoneDropdown = document.getElementById("phone-dropdown");
+      const phoneCopyBtn = document.getElementById("phone-copy-btn");
+      const phoneNumber = document.getElementById("phone-number");
+
+      phoneToggle.addEventListener("click", () => {
+        phoneDropdown.classList.toggle("show");
+      });
+
+      phoneCopyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(phoneNumber.textContent).then(() => {
+          const oldText = phoneCopyBtn.textContent;
+          phoneCopyBtn.textContent = "copied!";
+          setTimeout(() => (phoneCopyBtn.textContent = oldText), 1500);
+        });
+      });
     });
 }
