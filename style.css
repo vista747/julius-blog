@@ -120,7 +120,7 @@ small {
 
 /* smooth theme transition for common elements */
 body, 
-a, 
+a,
 .header-link, 
 .footer-link, 
 .post-link, 
@@ -171,4 +171,12 @@ small {
 #copy-btn:hover,
 #phone-copy-btn:hover {
   color: #00f; /* fade to blue on hover */
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
