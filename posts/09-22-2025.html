@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>my classes — julius.cool</title>
+  <script>
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1><span class="header-link" onclick="window.location='https://julius.cool'">my classes</span></h1>
+  <p>
+    <small>
+      september 22, 2025 — 13:08<br>
+      track: duster - untitled 59 — <span id="mute-toggle" class="mute-link">mute</span>
+    </small>
+  </p>
+  <p>
+    i am in ap computer science this year. it is a fun class and we are learning how to code in c. i wanted to take ap physics but i couldn't because precalculus enriched is a co-requisite and i am in regular precalculus. so far we did a scratch project which i did really good on and a quiz. my teacher graduated from georgia tech which is my dream school. hopefully he can write me a rec letter if i do well in the class. i am also looking at university of toronto. i want to go to school in canada because it is way cheaper than schools in the us. also, if trump's presidency continues the way it is currently going, i will not want to live here anymore. i'm studying for the act instead of the sat because i heard colleges prefer the act. i don't know if that is totally true though, i guess we'll see. i'm going to a few concerts this fall and also going to visit my family in atlanta in november. should be fun. i am also doing drivers ed and will get my license hopefully next month. so it's pretty epic but, yeah.
+  </p>
+
+  <p><span class="post-link" onclick="window.location='https://julius.cool'">← back</span></p>
+
+  <audio id="music" autoplay loop>
+  <source src="audio/untitled59.flac" type="audio/flac">
+  </audio>
+
+  <script>
+  const audio = document.getElementById("music");
+  audio.volume = 0.8; // default volume
+
+  audio.play().catch(() => {
+    document.body.addEventListener("click", startAudio, { once: true });
+  });
+
+  function startAudio() {
+    audio.play();
+  }
+
+  const muteToggle = document.getElementById("mute-toggle");
+  muteToggle.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      muteToggle.textContent = "mute";
+    } else {
+      audio.muted = true;
+      muteToggle.textContent = "unmute";
+    }
+  });
+  </script>
+
+  <div id="footer"></div>
+<script src="../footer.js"></script>
+<script>
+  loadFooter("../footer.html");
+</script>
+</body>
+</html>
