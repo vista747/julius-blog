@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vista747 @ home (11-9-2025)</title>
+  <script>
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1><span class="header-link" onclick="window.location='https://julius.cool'">vista747 @ home (11-9-2025)</span></h1>
+  <p>
+    <small>
+      saturday, november 9, 2025 — 16:50<br>
+      track: vegyn - b4 the computer crash (mixed) — <span id="mute-toggle" class="mute-link">mute</span>
+    </small>
+  </p>
+  <p>
+    hi guys! i haven't posted on here in a while.
+  </p>
+  <p>
+    yesterday i turned 17 years old. i got a 3d printer and some clothes. it was a good day.
+  </p>
+  <p>
+    today i went to dungons & dragons at ashvin's house and when i got home i made a short dj mix. i'm pretty happy with how it turned out, and i want to make more. i didn't want to post it on my regular epsilon tapes label so i put it on label label 31, which is my satire label, even though the mix isn't satire.
+  </p>
+  <p>
+    here's the <a href="https://labellabel31.bandcamp.com/album/vista747-home-11-9-2025" target="_blank">link to the mix on bandcamp</a>. hope u enjoy!
+  </p>
+
+
+  <p><span class="post-link" onclick="window.location='https://julius.cool'">← back</span></p>
+
+  <audio id="music" autoplay loop>
+  <source src="audio/b4thecomputercrash.m4a" type="audio/m4a">
+  </audio>
+
+  <script>
+  const audio = document.getElementById("music");
+  audio.volume = 0.8; // default volume
+
+  // Try autoplay immediately
+  audio.play().catch(() => {
+    // If it fails (autoplay blocked), wait for first click
+    document.body.addEventListener("click", startAudio, { once: true });
+  });
+
+  function startAudio() {
+    audio.play();
+  }
+
+  // Mute/unmute toggle
+  const muteToggle = document.getElementById("mute-toggle");
+  muteToggle.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      muteToggle.textContent = "mute";
+    } else {
+      audio.muted = true;
+      muteToggle.textContent = "unmute";
+    }
+  });
+  </script>
+
+  <div id="footer"></div>
+<script src="../footer.js"></script>
+<script>
+  loadFooter("../footer.html");
+</script>
+</body>
+</html>
