@@ -8,6 +8,17 @@
     <lastBuildDate>Sun, 14 Dec 2025 01:03:00 GMT</lastBuildDate>
 
     <item>
+      <title>TEST – RSS inbox check</title>
+      <link>https://julius.cool/</link>
+      <guid>https://julius.cool/</guid>
+      <pubDate>Sun, 14 Dec 2025 01:03:00 GMT</pubDate>
+      <description><![CDATA[
+        this is a test post to verify rss email delivery
+      ]]></description>
+    </item>
+
+
+    <item>
       <title>december 9, 2025</title>
       <link>https://julius.cool/posts/12-9-2025.html</link>
       <guid>https://julius.cool/posts/12-9-2025.html</guid>
