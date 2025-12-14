@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>julius.cool</title>
+    <link>https://julius.cool/</link>
+    <description>julius.cool</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Dec 2025 01:03:00 GMT</lastBuildDate>
+
+    <item>
+      <title>december 9, 2025</title>
+      <link>https://julius.cool/posts/12-9-2025.html</link>
+      <guid>https://julius.cool/posts/12-9-2025.html</guid>
+      <pubDate>Tue, 9 Dec 2025 11:52:00 GMT</pubDate>
+      <description><![CDATA[
+        new post @ julius.cool
+      ]]></description>
+    </item>
+
+    <item>
+      <title>November 9, 2025</title>
+      <link>https://julius.cool/posts/11-9-2025.html</link>
+      <guid>https://julius.cool/posts/11-9-2025.html</guid>
+      <pubDate>Sun, 9 Nov 2025 16:50:00 GMT</pubDate>
+      <description><![CDATA[
+        new post @ julius.cool
+      ]]></description>
+    </item>
+
+  </channel>
+</rss>
