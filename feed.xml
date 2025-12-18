@@ -8,26 +8,10 @@
     <lastBuildDate>Sun, 14 Dec 2025 01:10:00 GMT</lastBuildDate>
 
     <item>
-      <title>TEST – RSS inbox check</title>
-      <link>https://julius.cool/</link>
-      <guid isPermaLink="false">rss-test-2025-12-14-0110</guid>
-      <pubDate>Sun, 14 Dec 2025 01:10:00 GMT</pubDate>
-      <description><![CDATA[this is a test post to verify rss email delivery]]></description>
-    </item>
-
-    <item>
       <title>December 9, 2025</title>
       <link>https://julius.cool/posts/12-9-2025.html</link>
       <guid>https://julius.cool/posts/12-9-2025.html</guid>
       <pubDate>Tue, 09 Dec 2025 11:52:00 GMT</pubDate>
-      <description><![CDATA[new post @ julius.cool]]></description>
-    </item>
-
-    <item>
-      <title>November 9, 2025</title>
-      <link>https://julius.cool/posts/11-9-2025.html</link>
-      <guid>https://julius.cool/posts/11-9-2025.html</guid>
-      <pubDate>Sun, 09 Nov 2025 16:50:00 GMT</pubDate>
       <description><![CDATA[new post @ julius.cool]]></description>
     </item>
 
