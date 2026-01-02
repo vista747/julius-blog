@@ -4,10 +4,30 @@
   --muted: #666;
 }
 
+::selection {
+  background: #00f;  
+  color: #ccc;
+}
+
+::-moz-selection {
+  background: #00f;
+  color: #ccc;
+}
+
 .dark-mode {
   --bg: #111;
   --fg: #ccc;
   --muted: #999;
+}
+
+.dark-mode ::selection {
+  background: #ccc;  
+  color: #00f;
+}
+
+.dark-mode ::-moz-selection {
+  background: #ccc;
+  color: #00f;
 }
 
 body {
