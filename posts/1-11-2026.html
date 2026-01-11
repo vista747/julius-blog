@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="/head.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>i'm uninstalling windows — julius.cool</title>
+  <script>
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1><span class="header-link" onclick="window.location='https://julius.cool'">i'm uninstalling windows</span></h1>
+  <p>
+    <small>
+      sunday, january 11, 2026 — 16:23<br>
+      track: death's dynamic shroud.wmv - hypnagogia — <span id="mute-toggle" class="mute-link">mute</span>
+    </small>
+  </p>
+  <h2>
+    why am i doing this
+  </h2>
+  <p>
+    as i begin the process of building a new gaming pc, i have decided that windows is not the operating system i want to use. i have been using windows for every pc i've worked on in the past, but in recent years the microsoft team has filled it with bloatware and unnecessary ai features that make the experience unenjoyable and slow. i don't want to have to see headlines about epstein and trump every time i accidentally hover my mouse into the bottom left corner of the screen. all i want is a clean, fast, customizable, and minimal desktop that is built around my priorities, even if there are some downsides. after doing some research, i discovered the wonderful world of linux, an open-source, unix-based operating system that is used by many gamers and developers around the world. it's known for its stability, security, and customization. in fact, its used on over 90% of the world's servers.
+  </p>
+  <h2>
+    picking a distro
+  </h2>
+  <p>
+    one of the things that separates linux from other operating systems is the fact that there are many different "distributions" or "distros" to choose from. each distro has its own unique features, package managers, dedicated applications, and user interfaces. some of the more popular distros include ubuntu, fedora, debian, and arch. arch has become a meme due to the fact that it's much more difficult to install and use than other distros.
+  </p>
+  </p>
+    after testing out a few distros in a virtual machine on my mac, i decided to go with kubuntu. kubuntu is a user-friendly distro that is primarily based on ubuntu, however, it uses the kde plasma desktop environment instead of the default one, gnome. this means that it has a more customizable and modern interface, as well as a large selection of applications and tools. it also has a large community of users and developers who can provide support and help when needed.
+  </p>
+  <p>
+    while kubuntu is the distro that fits my needs best, there are many other distros to choose from that might be better for different use cases. for example, if you want a more lightweight and minimal desktop, you might want to try out arch or debian. if you want a more beginner-friendly experience that is most similar to windows, you might want to try out linux mint. ultimately, the best distro for you will depend on your specific needs and preferences. 
+  </p>
+  <h2>
+    ricing and customizing
+  </h2>
+  <p>
+    what makes linux especially appealing to me is the fact that it is super customizable. you can change literally every aspect of your desktop, not just the wallpaper and a color, but also the way your windows look, the way your taskbar works, and even the way your applications behave. this process is often called "ricing" and it allows you to create a desktop environment that is unique and tailored to your specific needs. there are many different tools and applications available to help you customize your desktop, including themes, icons, and widgets. you can also use a window manager such as i3 or awesome that allows you to manage your windows more efficiently. the possibilities are actually endless when it comes to customizing linux, and it's one of the things that makes it so rewarding to use.
+  </p>
+  <h2>
+    learning to use a terminal
+  </h2>
+  <p>
+    another aspect that makes linux so powerful is the fact that it has a powerful command-line interface, also known as a terminal. the terminal allows you to interact with your computer using text commands instead of a graphical user interface. while this might seem intimidating at first, it is extremely useful and efficient once you get the hang of it. there are many different resources available online to help you learn how to use the terminal, including tutorials, videos, and forums. if you've used the terminal on macos in the past, you'll find that many of the commands are the same or very similar on linux. some of the most common commands include "ls" to list files and directories, "cd" to change directories, "mkdir" to create a new directory, and "rm" to delete files. learning how to use the terminal will allow you to do things that are not possible with a graphical user interface, such as installing software, managing files, and troubleshooting issues.
+  </p>
+  <h2>
+    gaming and valve proton
+  </h2>
+  <p>
+    in the past, one of the biggest drawbacks of using linux was that gaming compatibility was very limited. many games were only available on windows, and even those that were available on linux often had major performance issues and bugs. however, in recent years, the gaming experience has improved significantly thanks to the efforts of companies like valve and their 'proton compatibility layer'. proton allows you to run many windows games on linux with little to no performance loss, and it has a large and growing library of supported games.
+  </p>
+  <p>
+    for singleplayer games, the experience is seamless and often runs faster that it would on windows. for multiplayer games, however, there are many issues with anti-cheat software and other compatibility issues that can cause problems. this means games like valorant, rainbow six seige, and apex legends are not currently playable on linux and attempting to do so might get your account banned. however, many other popular games such as cs:go, dota 2, and overwatch are fully supported and run great on linux. overall, the gaming experience on linux has come a long way in recent years, and it's now possible to play many of your favorite games without having to switch back to windows.
+  </p>
+  <h2>
+    concluding thoughts
+  </h2>
+  <p>
+    while linux is not perfect and there are still some issues with compatibility and software availability, it is a powerful and customizable operating system that is worth considering if you're looking for an alternative to windows. after choosing the right distro and devoting some time to learning how to use it, you can create a desktop environment that is tailored to your specific needs and preferences. if you're interested in trying out linux or have any questions about it, feel free to reach out to me or check out some of the many resources available online. thanks for reading!
+  </p>
+
+  <p><span class="post-link" onclick="window.location='https://julius.cool'">← back</span></p>
+
+  <audio id="music" autoplay loop>
+  <source src="audio/hypnagogia.m4a" type="audio/m4a">
+  </audio>
+
+  <script>
+  const audio = document.getElementById("music");
+  audio.volume = 0.8; // default volume
+
+  // Try autoplay immediately
+  audio.play().catch(() => {
+    // If it fails (autoplay blocked), wait for first click
+    document.body.addEventListener("click", startAudio, { once: true });
+  });
+
+  function startAudio() {
+    audio.play();
+  }
+
+  // Mute/unmute toggle
+  const muteToggle = document.getElementById("mute-toggle");
+  muteToggle.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      muteToggle.textContent = "mute";
+    } else {
+      audio.muted = true;
+      muteToggle.textContent = "unmute";
+    }
+  });
+  </script>
+
+  <div id="footer"></div>
+<script src="../footer.js"></script>
+<script>
+  loadFooter("../footer.html");
+</script>
+</body>
+</html>
