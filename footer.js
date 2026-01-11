@@ -84,7 +84,7 @@ function loadFooter(path) {
           // easter egg counter
           emailClickCount++;
           clearTimeout(emailClickTimer);
-          emailClickTimer = setTimeout(() => { emailClickCount = 0; }, 3000);
+          emailClickTimer = setTimeout(() => { emailClickCount = 0; }, 5000);
           if (emailClickCount >= 5) {
             window.location = "https://julius.cool/richard";
           }
