@@ -85,7 +85,7 @@ function loadFooter(path) {
           emailClickCount++;
           clearTimeout(emailClickTimer);
           emailClickTimer = setTimeout(() => { emailClickCount = 0; }, 5000);
-          if (emailClickCount >= 5) {
+          if (emailClickCount >= 10) {
             window.location = "https://julius.cool/richard";
           }
 
