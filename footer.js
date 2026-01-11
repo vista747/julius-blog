@@ -69,6 +69,10 @@ function loadFooter(path) {
       const phoneCopyBtn  = document.getElementById("phone-copy-btn");
       const phoneNumber   = document.getElementById("phone-number");
 
+      // easter egg: click email 5 times to go to secret page
+      let emailClickCount = 0;
+      let emailClickTimer = null;
+
       if (emailToggle && emailDropdown) {
         emailToggle.addEventListener("click", () => {
           // always close phone first
@@ -76,6 +80,14 @@ function loadFooter(path) {
 
           // then toggle email
           emailDropdown.classList.toggle("show");
+
+          // easter egg counter
+          emailClickCount++;
+          clearTimeout(emailClickTimer);
+          emailClickTimer = setTimeout(() => { emailClickCount = 0; }, 3000);
+          if (emailClickCount >= 5) {
+            window.location = "https://julius.cool/richard";
+          }
 
           setTimeout(adjustFooterMode, 320);
         });
