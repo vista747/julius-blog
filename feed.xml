@@ -1,19 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>julius.cool</title>
-    <link>https://julius.cool/</link>
-    <description>personal blog by julius</description>
+    <link>https://julius.cool</link>
+    <description>julius's blog</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Dec 2025 01:10:00 GMT</lastBuildDate>
-
+    <atom:link href="https://julius.cool/feed.xml" rel="self" type="application/rss+xml"/>
+    
     <item>
-      <title>December 9, 2025</title>
-      <link>https://julius.cool/posts/12-9-2025.html</link>
-      <guid>https://julius.cool/posts/12-9-2025.html</guid>
-      <pubDate>Tue, 09 Dec 2025 11:52:00 GMT</pubDate>
-      <description><![CDATA[new post @ julius.cool]]></description>
+      <title>i'm uninstalling windows</title>
+      <link>https://julius.cool/posts/1-11-2026</link>
+      <guid>https://julius.cool/posts/1-11-2026</guid>
+      <pubDate>Sun, 11 Jan 2026 16:23:00 -0500</pubDate>
+      <description>i'm uninstalling windows</description>
     </item>
-
+    
+    <item>
+      <title>my new 3d printer</title>
+      <link>https://julius.cool/posts/12-9-2025</link>
+      <guid>https://julius.cool/posts/12-9-2025</guid>
+      <pubDate>Tue, 09 Dec 2025 11:52:00 -0500</pubDate>
+      <description>my new 3d printer</description>
+    </item>
+    
+    <item>
+      <title>vista747 @ home (11-9-2025)</title>
+      <link>https://julius.cool/posts/11-9-2025</link>
+      <guid>https://julius.cool/posts/11-9-2025</guid>
+      <pubDate>Sun, 09 Nov 2025 16:50:00 -0500</pubDate>
+      <description>vista747 @ home (11-9-2025)</description>
+    </item>
+    
+    <item>
+      <title>my classes</title>
+      <link>https://julius.cool/posts/09-22-2025</link>
+      <guid>https://julius.cool/posts/09-22-2025</guid>
+      <pubDate>Mon, 22 Sep 2025 13:08:00 -0400</pubDate>
+      <description>my classes</description>
+    </item>
+    
+    <item>
+      <title>project: better rich presence</title>
+      <link>https://julius.cool/posts/08-30-2025</link>
+      <guid>https://julius.cool/posts/08-30-2025</guid>
+      <pubDate>Sat, 30 Aug 2025 01:39:00 -0400</pubDate>
+      <description>project: better rich presence</description>
+    </item>
+    
+    <item>
+      <title>i'm back :3</title>
+      <link>https://julius.cool/posts/08-28-2025</link>
+      <guid>https://julius.cool/posts/08-28-2025</guid>
+      <pubDate>Thu, 28 Aug 2025 23:48:00 -0400</pubDate>
+      <description>i'm back :3</description>
+    </item>
+    
+    <item>
+      <title>site changes and stuff</title>
+      <link>https://julius.cool/posts/08-22-2025</link>
+      <guid>https://julius.cool/posts/08-22-2025</guid>
+      <pubDate>Fri, 22 Aug 2025 00:32:00 -0400</pubDate>
+      <description>site changes and stuff</description>
+    </item>
+    
+    <item>
+      <title>repurposing this blog</title>
+      <link>https://julius.cool/posts/08-21-2025</link>
+      <guid>https://julius.cool/posts/08-21-2025</guid>
+      <pubDate>Thu, 21 Aug 2025 03:49:00 -0400</pubDate>
+      <description>repurposing this blog</description>
+    </item>
+    
+    <item>
+      <title>how/why did i make this blog?</title>
+      <link>https://julius.cool/posts/08-20-2025-2</link>
+      <guid>https://julius.cool/posts/08-20-2025-2</guid>
+      <pubDate>Wed, 20 Aug 2025 22:29:00 -0400</pubDate>
+      <description>how/why did i make this blog?</description>
+    </item>
+    
+    <item>
+      <title>my first blog post</title>
+      <link>https://julius.cool/posts/08-20-2025</link>
+      <guid>https://julius.cool/posts/08-20-2025</guid>
+      <pubDate>Wed, 20 Aug 2025 19:43:00 -0400</pubDate>
+      <description>my first blog post</description>
+    </item>
+    
   </channel>
 </rss>
