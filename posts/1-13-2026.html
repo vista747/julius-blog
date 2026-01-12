@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="/head.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 months with the bambu lab p1s — julius.cool</title>
+  <script>
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1><span class="header-link" onclick="window.location='https://julius.cool'">2 months with the bambu lab p1s</span></h1>
+  <p>
+    <small>
+      tuesday, january 13, 2026 — 00:00<br>
+      track: chino yoshio - 193193 sleep — <span id="mute-toggle" class="mute-link">mute</span>
+    </small>
+  </p>
+  <h2>
+    intro
+  </h2>
+  <p>
+    it's been about 2 months since i got my bambu lab p1s, and i wanted to share an in-depth review of my experience with it so far. i've been using it for a variety of projects, including printing parts for my robotics team, as well as some fun and creative prints. i've leaned the basics of autodesk fusion and have started printing projects that i designed myself. so far, i've been really impressed with the quality and speed of the prints, as well as the ease of use of the printer. in this post, i'll go over some of the things i've learned and experienced while using the bambu lab p1s, as well as some tips and tricks for getting the most out of it.
+  </p>
+  <h2>
+    mods and upgrades
+  </h2>
+  <p>
+    i have added a lot of modifications and upgrades to the printer since i got it. what's cool about a lot of the mods is that i can make them on the printer itself. some of the more crucial upgrades that i highly reccomend would be upgrading the nozzle and extruder gears to hardened steel. the hardened steel allows you to print with carbon-fiber and glass-fiber filled filaments. these filaments are much stronger than regular pla and pet-g, and they allow you to print parts that are much more durable and functional. this is crucial if you're thinking about printing automotive parts or parts that may need to withstand strong weather.
+  </p>
+  <p>
+    i also printed a lot of quality of life mods for the printer, such as a filament 'poop chute' that collects the filament change waste that spits out of the back of the printer. i also added a riser for my ams unit, which allows me to slide the top glass off of the printer without having to remove the ams unit. this is really helpful for cleaning the glass and easily reaching the top of the extruder head. i added a build plate holder, and an attachment for my ams riser that holds my ams-ht. i also printed dessicant holders for my ams, which brings me to my next point.
+  </p>
+  <h2>
+    filament drying and storage
+  </h2>
+  <p>
+    one of the most important things you can do to improve the quality of your prints is to dry your filament. if you leave your filament out in the open, it will absorb moisture from the air, which can cause issues with print quality and even damage your printer. the ams 2 pro is a great tool for drying your filament, and it can hold up to 4 spools of filament at a time. i highly recommend using it to keep your filament dry and ready to use. if you have the original ams unit, you can use dessicant packets, or in my case print holders that fit more dessicant to help absorb moisture from the air inside the ams, and you can store your filament in airtight containers with dessicant packets to keep them dry. filament that isn't dried can lead to fuzzy spots on the side of your printer. if you live in a high humidity area, this is a crucial step to ensure the quality of your prints is the best it can be. 
+  </p>
+  <h2>
+    
+  </h2>
+  <p><span class="post-link" onclick="window.location='https://julius.cool'">← back</span></p>
+
+  <audio id="music" autoplay loop>
+  <source src="audio/193193_sleep.flac" type="audio/flac">
+  </audio>
+
+  <script>
+  const audio = document.getElementById("music");
+  audio.volume = 0.8; // default volume
+
+  // Try autoplay immediately
+  audio.play().catch(() => {
+    // If it fails (autoplay blocked), wait for first click
+    document.body.addEventListener("click", startAudio, { once: true });
+  });
+
+  function startAudio() {
+    audio.play();
+  }
+
+  // Mute/unmute toggle
+  const muteToggle = document.getElementById("mute-toggle");
+  muteToggle.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      muteToggle.textContent = "mute";
+    } else {
+      audio.muted = true;
+      muteToggle.textContent = "unmute";
+    }
+  });
+  </script>
+
+  <div id="footer"></div>
+<script src="../footer.js"></script>
+<script>
+  loadFooter("../footer.html");
+</script>
+</body>
+</html>
