@@ -5,12 +5,12 @@
 }
 
 ::selection {
-  background: #00f;
+  background: #111;
   color: #ccc;
 }
 
 ::-moz-selection {
-  background: #00f;
+  background: #111;
   color: #ccc;
 }
 
@@ -22,12 +22,12 @@
 
 .dark-mode ::selection {
   background: #ccc;
-  color: #00f;
+  color: #111;
 }
 
 .dark-mode ::-moz-selection {
   background: #ccc;
-  color: #00f;
+  color: #111;
 }
 
 body {
