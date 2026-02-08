@@ -4,11 +4,7 @@
   --muted: #666;
 }
 
-::selection {
-  background: #00f;  
-  color: #ccc;
-}
-
+::selection,
 ::-moz-selection {
   background: #00f;
   color: #ccc;
@@ -20,11 +16,7 @@
   --muted: #999;
 }
 
-.dark-mode ::selection {
-  background: #ccc;  
-  color: #00f;
-}
-
+.dark-mode ::selection,
 .dark-mode ::-moz-selection {
   background: #ccc;
   color: #00f;
@@ -47,11 +39,11 @@ strong, b {
 a {
   color: var(--fg);
   text-decoration: none;
-  transition: color 0.3s ease;  
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #00f !important; 
+  color: #00f !important;
 }
 
 hr {
@@ -65,6 +57,33 @@ img {
   height: auto;
 }
 
+.theme-image-wrap {
+  position: relative;
+  max-width: 100%;
+}
+
+.theme-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.theme-image.dark {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dark-mode .theme-image.light {
+  opacity: 0;
+}
+
+.dark-mode .theme-image.dark {
+  opacity: 1;
+}
+
 .site-footer {
   left: 2rem;
   right: 2rem;
@@ -75,45 +94,18 @@ img {
   z-index: 9999;
 }
 
-/* Footer fixed at bottom of the screen (for short pages) */
 .site-footer.fixed {
   position: fixed;
   bottom: 1.5rem;
 }
 
-/* Footer at bottom of the document flow (for long pages) */
 .site-footer.static {
   position: static;
-  margin-top: 2rem; /* small gap from content when it's in flow */
+  margin-top: 2rem;
 }
 
-.header-link {
-  color: var(--fg);
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.header-link:hover {
-  color: #00f; 
-}
-
-.footer-link {
-  color: var(--fg);
-  text-decoration: none;
-  cursor: pointer;
-  margin-right: 8px;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #00f;
-}
-
-.footer-link:last-child {
-  margin-right: 0;
-}
-
+.header-link,
+.footer-link,
 .post-link {
   color: var(--fg);
   text-decoration: none;
@@ -121,8 +113,18 @@ img {
   transition: color 0.3s ease;
 }
 
+.header-link:hover,
+.footer-link:hover,
 .post-link:hover {
   color: #00f;
+}
+
+.footer-link {
+  margin-right: 8px;
+}
+
+.footer-link:last-child {
+  margin-right: 0;
 }
 
 small {
@@ -138,18 +140,16 @@ small {
   color: #00f;
 }
 
-/*smooth transition */
-body, 
+body,
 a,
-.header-link, 
-.footer-link, 
-.post-link, 
+.header-link,
+.footer-link,
+.post-link,
 small {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* email dropdown */
-.email-dropdown{
+.email-dropdown {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -158,7 +158,7 @@ small {
 
 .email-dropdown.show {
   opacity: 1;
-  max-height: 100px; /* enough to fit content */
+  max-height: 100px;
 }
 
 #email-address {
@@ -166,14 +166,14 @@ small {
 }
 
 #copy-btn,
-#phone-copy-btn{
+#phone-copy-btn {
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 #copy-btn:hover,
 #phone-copy-btn:hover {
-  color: #00f; /* fade to blue on hover */
+  color: #00f;
 }
 
 .material-symbols-outlined {
@@ -181,5 +181,63 @@ small {
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 24
+  'opsz' 24;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-column {
+  width: 55%;
+}
+
+.left-column h1 {
+  margin-top: 0;
+}
+
+.right-column {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.usps-image-wrap {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+
+.usps-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.usps-image.dark,
+.usps-image.hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dark-mode .usps-image.light,
+.usps-image.hover.light {
+  opacity: 0;
+}
+
+.dark-mode .usps-image.dark {
+  opacity: 0.9;
+}
+
+.dark-mode .usps-image-wrap:hover .usps-image.hover.light {
+  opacity: 0;
 }
