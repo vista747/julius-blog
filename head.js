@@ -2,6 +2,7 @@ fetch("/rss-head.html")
   .then(res => res.text())
   .then(html => {
     const gtag = `<!-- Google tag (gtag.js) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-51Z344C42L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
