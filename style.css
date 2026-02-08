@@ -36,7 +36,7 @@ body {
   color: var(--fg);
   line-height: 1.5;
   font-weight: normal;
-  padding-bottom: 0; /* small breathing room; footer mode handles overlap */
+  padding-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p,
@@ -138,7 +138,7 @@ small {
   color: #00f;
 }
 
-/* smooth theme transition for common elements */
+/*smooth transition */
 body, 
 a,
 .header-link, 
@@ -149,7 +149,7 @@ small {
 }
 
 /* email dropdown */
-.email-dropdown {
+.email-dropdown{
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -165,25 +165,8 @@ small {
   color: var(--fg);
 }
 
-/* phone dropdown */
-.phone-dropdown {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
-}
-
-.phone-dropdown.show {
-  opacity: 1;
-  max-height: 100px; /* enough to fit content */
-}
-
-#phone-number {
-  color: var(--fg);
-}
-
 #copy-btn,
-#phone-copy-btn {
+#phone-copy-btn{
   cursor: pointer;
   transition: color 0.3s ease;
 }
