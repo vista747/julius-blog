@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Vulf Mono";
+    src: url("../fonts/Vulf_Mono-Regular_web.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vulf Mono";
+    src: url("../fonts/Vulf_Mono-Italic_web.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Vulf Mono";
+    src: url("../fonts/Vulf_Mono-Light_web.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vulf Mono";
+    src: url("../fonts/Vulf_Mono-Light_Italic_web.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Vulf Mono";
+    src: url("../fonts/Vulf_Mono-Bold_web.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vulf Mono";
+    src: url("../fonts/Vulf_Mono-Bold_Italic_web.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Vulf Mono";
+    src: url("../fonts/Vulf_Mono-Black_web.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vulf Mono";
+    src: url("../fonts/Vulf_Mono-Black_Italic_web.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+}
+::selection {
+    background-color: #282828;
+    color: #c4c4c4;
+}
+
+body {
+    margin: 2rem;
+    background-color: #c4c4c4;
+    color: #282828;
+    line-height: 1.2;
+    font-weight: normal;
+    padding-bottom: 0;
+}
+h1, h2, p, ul {
+    font-family: "Vulf Mono";
+    font-style: italic;
+}
+h2, p, ul {
+    font-weight: 400;
+}
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 0.8;
+}
+h2 {
+    font-size: 24px;
+}
+p, ul {
+    font-size: 14px;
+}
+li {
+    list-style-type: lower-alpha;
+}
+.link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: grab;
+}
+.link:hover{
+    color: #f00;
+}
