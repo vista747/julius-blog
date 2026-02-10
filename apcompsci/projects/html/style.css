@@ -66,6 +66,16 @@ body {
     font-weight: normal;
     padding-bottom: 0;
 }
+hr {
+  border: 0;
+  border-top: 1px solid #c4c4c4;
+  margin: 1rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 h1, h2, p, ul {
     font-family: "Vulf Mono";
     font-style: italic;
@@ -90,8 +100,23 @@ li {
 .link {
     text-decoration: none;
     transition: color 0.3s ease;
-    cursor: grab;
+    cursor: pointer;
 }
 .link:hover{
     color: #f00;
+}
+.header {
+    color: #f00;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.post-link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.post-link:hover {
+    color: #f00;
+    cursor: pointer;
 }
