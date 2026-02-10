@@ -1,55 +1,55 @@
 @font-face {
     font-family: "Vulf Mono";
-    src: url("../fonts/Vulf_Mono-Regular_web.woff2") format("woff2");
+    src: url("./fonts/Vulf_Mono-Regular_web.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Vulf Mono";
-    src: url("../fonts/Vulf_Mono-Italic_web.woff2") format("woff2");
+    src: url("./fonts/Vulf_Mono-Italic_web.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Vulf Mono";
-    src: url("../fonts/Vulf_Mono-Light_web.woff2") format("woff2");
+    src: url("./fonts/Vulf_Mono-Light_web.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Vulf Mono";
-    src: url("../fonts/Vulf_Mono-Light_Italic_web.woff2") format("woff2");
+    src: url("./fonts/Vulf_Mono-Light_Italic_web.woff2") format("woff2");
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Vulf Mono";
-    src: url("../fonts/Vulf_Mono-Bold_web.woff2") format("woff2");
+    src: url("./fonts/Vulf_Mono-Bold_web.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Vulf Mono";
-    src: url("../fonts/Vulf_Mono-Bold_Italic_web.woff2") format("woff2");
+    src: url("./fonts/Vulf_Mono-Bold_Italic_web.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Vulf Mono";
-    src: url("../fonts/Vulf_Mono-Black_web.woff2") format("woff2");
+    src: url("./fonts/Vulf_Mono-Black_web.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Vulf Mono";
-    src: url("../fonts/Vulf_Mono-Black_Italic_web.woff2") format("woff2");
+    src: url("./fonts/Vulf_Mono-Black_Italic_web.woff2") format("woff2");
     font-weight: 900;
     font-style: italic;
 }
