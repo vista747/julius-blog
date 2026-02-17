@@ -176,5 +176,60 @@
     setInterval(updateClock, 1000);
   </script>
 
+  <audio id="bgLoop" preload="auto" loop playsinline>
+  <source src="/posts/audio/homepage.flac" type="audio/flac">
+  </audio>
+
+  <script>
+  const audio = document.getElementById("bgLoop");
+
+  // tweak these
+  const TARGET_VOL = 0.8;     // final volume (0.0 - 1.0)
+  const FADE_MS = 1200;       // fade duration
+
+  function fadeIn(el, target = TARGET_VOL, durationMs = FADE_MS) {
+    el.volume = 0;
+    const steps = 30;
+    const stepTime = durationMs / steps;
+    let i = 0;
+
+    const timer = setInterval(() => {
+      i++;
+      el.volume = Math.min(target, (target * i) / steps);
+      if (i >= steps) clearInterval(timer);
+    }, stepTime);
+  }
+
+  async function startAudio() {
+    try {
+      // If you want it to start at a random point in the loop:
+      // audio.currentTime = Math.random() * (audio.duration || 0);
+
+      await audio.play();
+      fadeIn(audio);
+      removeStartListeners();
+    } catch (e) {
+      // Autoplay likely blocked; user interaction needed.
+    }
+  }
+
+  function addStartListeners() {
+    window.addEventListener("pointerdown", startAudio, { once: true });
+    window.addEventListener("keydown", startAudio, { once: true });
+    window.addEventListener("touchstart", startAudio, { once: true });
+  }
+
+  function removeStartListeners() {
+    // (these are once:true so they remove automatically)
+  }
+
+  // Try on load (works only if browser allows it)
+  window.addEventListener("load", () => {
+    addStartListeners();
+    startAudio();
+  });
+  </script>
+
+
 </body>
 </html>
