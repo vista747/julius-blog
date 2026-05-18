@@ -100,11 +100,14 @@ img {
   align-items: flex-end;
   font-size: 14px;
   z-index: 9999;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
 }
 
 .site-footer.fixed {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 1.5rem
 }
 
 .site-footer.static {
