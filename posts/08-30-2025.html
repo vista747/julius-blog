@@ -5,16 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>project: better rich presence — julius.cool</title>
-  <script>
-  (function () {
-    try {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.classList.add('dark-mode');
-      }
-    } catch (e) {}
-  })();
-</script>
-<link rel="stylesheet" href="../style.css">
+  <script src="/theme.js"></script>
+<link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download" /></head>
 
 </head>
@@ -46,37 +38,9 @@
   <source src="audio/opening_narration.opus" type="audio/opus">
   </audio>
 
-  <script>
-  const audio = document.getElementById("music");
-  audio.volume = 0.8; // default volume
-
-  // Try autoplay immediately
-  audio.play().catch(() => {
-    // If it fails (autoplay blocked), wait for first click
-    document.body.addEventListener("click", startAudio, { once: true });
-  });
-
-  function startAudio() {
-    audio.play();
-  }
-
-  // Mute/unmute toggle
-  const muteToggle = document.getElementById("mute-toggle");
-  muteToggle.addEventListener("click", () => {
-    if (audio.muted) {
-      audio.muted = false;
-      muteToggle.textContent = "mute";
-    } else {
-      audio.muted = true;
-      muteToggle.textContent = "unmute";
-    }
-  });
-  </script>
 
   <div id="footer"></div>
-<script src="../footer.js"></script>
-<script>
-  loadFooter("../footer.html");
-</script>
+<script src="/footer.js"></script>
+<script src="/post.js"></script>
 </body>
 </html>

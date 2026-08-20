@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-51Z344C42L"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-51Z344C42L');
-  </script>
   <script src="/head.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,30 +9,7 @@
   <link rel="preload" as="image" href="assets/uspslightmodehover.png">
   <link rel="preload" as="image" href="assets/uspsdarkmode.png">
   <link rel="preload" as="image" href="assets/uspsdarkmodehover.png">
-  <script>
-    (function () {
-      const urls = [
-        "assets/uspslightmode.png",
-        "assets/uspslightmodehover.png",
-        "assets/uspsdarkmode.png",
-        "assets/uspsdarkmodehover.png"
-      ];
-      window.__uspsPreload = urls.map((src) => {
-        const img = new Image();
-        img.src = src;
-        return img;
-      });
-    })();
-  </script>
-  <script>
-    (function () {
-      try {
-        if (localStorage.getItem('theme') === 'dark') {
-          document.documentElement.classList.add('dark-mode');
-        }
-      } catch (e) {}
-    })();
-  </script>
+  <script src="/theme.js"></script>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -58,51 +28,51 @@
           </span>
         </small>
       </p>
-      <div>
+      <div class="post-list">
         <span class="post-link" onclick="window.location='https://julius.cool/posts/08-20-2026'">
           georgia tech summer program
         </span>
-        <small>— thursday, august 20, 2026 — 13:38</small><br>
+        <small><span class="dash">— </span>thursday, august 20, 2026 — 13:38</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/01-11-2026'">
           i'm uninstalling windows
         </span>
-        <small>— sunday, january 11, 2026 — 16:23</small><br>
+        <small><span class="dash">— </span>sunday, january 11, 2026 — 16:23</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/12-9-2025'">
           my new 3d printer
         </span>
-        <small>— tuesday, december 9, 2025 — 11:52</small><br>
+        <small><span class="dash">— </span>tuesday, december 9, 2025 — 11:52</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/11-9-2025'">
           vista747 @ home (11-9-2025)
         </span>
-        <small>— sunday, november 9, 2025 — 16:50</small><br>
+        <small><span class="dash">— </span>sunday, november 9, 2025 — 16:50</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/09-22-2025'">
           my classes
         </span>
-        <small>— monday, september 22, 2025 — 13:08</small><br>
+        <small><span class="dash">— </span>monday, september 22, 2025 — 13:08</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/08-30-2025'">
           project: better rich presence
         </span>
-        <small>— saturday, august 30, 2025 — 01:39</small><br>
+        <small><span class="dash">— </span>saturday, august 30, 2025 — 01:39</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/08-28-2025'">
           i'm back :3
         </span>
-        <small>— thursday, august 28, 2025 — 23:48</small><br>
+        <small><span class="dash">— </span>thursday, august 28, 2025 — 23:48</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/08-22-2025'">
           site changes and stuff
         </span>
-        <small>— friday, august 22, 2025 — 00:32</small><br>
+        <small><span class="dash">— </span>friday, august 22, 2025 — 00:32</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/08-21-2025'">
           repurposing this blog
         </span>
-        <small>— thursday, august 21, 2025 — 03:49</small><br>
+        <small><span class="dash">— </span>thursday, august 21, 2025 — 03:49</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/08-20-2025-2'">
           how/why did i make this blog?
         </span>
-        <small>— wednesday, august 20, 2025 — 22:29</small><br>
+        <small><span class="dash">— </span>wednesday, august 20, 2025 — 22:29</small><br>
         <span class="post-link" onclick="window.location='https://julius.cool/posts/08-20-2025'">
           my first blog post
         </span>
-        <small>— wednesday, august 20, 2025 — 19:43</small>
+        <small><span class="dash">— </span>wednesday, august 20, 2025 — 19:43</small>
       </div>
       <div id="footer"></div>
     </div>
@@ -115,64 +85,11 @@
       </div>
     </div>
   </div>
-  <script src="./footer.js"></script>
-  <script>
-    loadFooter("./footer.html");
-  </script>
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const weekday = now.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
-      const month   = now.toLocaleDateString('en-US', { month: 'long' }).toLowerCase();
-      const day     = now.getDate();
-      const year    = now.getFullYear();
-      const hours   = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      const formatted =
-        `${weekday}, ${month} ${day}, ${year} — ${hours}:${minutes}:${seconds}`;
-      document.getElementById("live-clock").textContent = formatted;
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
-  </script>
   <audio id="bgLoop" preload="auto" loop playsinline>
   <source src="/posts/audio/homepage.opus" type="audio/opus">
   </audio>
-  <script>
-  const audio = document.getElementById("bgLoop");
-  const TARGET_VOL = 0.8;
-  const FADE_MS = 1200;
-  function fadeIn(el, target = TARGET_VOL, durationMs = FADE_MS) {
-    el.volume = 0;
-    const steps = 30;
-    const stepTime = durationMs / steps;
-    let i = 0;
-    const timer = setInterval(() => {
-      i++;
-      el.volume = Math.min(target, (target * i) / steps);
-      if (i >= steps) clearInterval(timer);
-    }, stepTime);
-  }
-  async function startAudio() {
-    try {
-      await audio.play();
-      fadeIn(audio);
-      removeStartListeners();
-    } catch (e) {
-    }
-  }
-  function addStartListeners() {
-    window.addEventListener("pointerdown", startAudio, { once: true });
-    window.addEventListener("keydown", startAudio, { once: true });
-    window.addEventListener("touchstart", startAudio, { once: true });
-  }
-  function removeStartListeners() {
-  }
-  window.addEventListener("load", () => {
-    addStartListeners();
-    startAudio();
-  });
-  </script>
+  <script src="/footer.js"></script>
+  <script src="/clock.js"></script>
+  <script src="/home.js"></script>
 </body>
 </html>

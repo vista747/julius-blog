@@ -125,8 +125,9 @@ function loadFooter(path) {
         });
       }
 
-      // run once on load + on resize
-      adjustFooterMode();
+      adjustFooterMode(); // run once on load + on resize
       window.addEventListener("resize", adjustFooterMode);
     });
 }
+
+loadFooter("/footer.html");

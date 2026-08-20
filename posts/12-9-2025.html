@@ -5,16 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>my new 3d printer — julius.cool</title>
-  <script>
-  (function () {
-    try {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.classList.add('dark-mode');
-      }
-    } catch (e) {}
-  })();
-</script>
-<link rel="stylesheet" href="../style.css">
+  <script src="/theme.js"></script>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <h1><span class="header-link" onclick="window.location='https://julius.cool'">my new 3d printer</span></h1>
@@ -41,62 +33,9 @@
   <source src="audio/flimnodrums.opus" type="audio/opus">
   </audio>
 
-  <script>
-  const audio = document.getElementById("music");
-  audio.volume = 0.8; // default volume
-
-  // Try autoplay immediately
-  audio.play().catch(() => {
-    // If it fails (autoplay blocked), wait for first click
-    document.body.addEventListener("click", startAudio, { once: true });
-  });
-
-  function startAudio() {
-    audio.play();
-  }
-
-  // Mute/unmute toggle with fade
-  const muteToggle = document.getElementById("mute-toggle");
-  muteToggle.addEventListener("click", () => {
-    if (audio.muted) {
-      audio.muted = false;
-      audio.volume = 0;
-      muteToggle.textContent = "mute";
-      fadeIn();
-    } else {
-      fadeOut();
-    }
-  });
-
-  function fadeOut() {
-    const fadeInterval = setInterval(() => {
-      if (audio.volume > 0.01) {
-        muteToggle.textContent = "unmute";
-        audio.volume = Math.max(0, audio.volume - 0.05);
-      } else {
-        audio.volume = 0;
-        audio.muted = true;
-        clearInterval(fadeInterval);
-      }
-    }, 25); // 0.5s / 20 steps = 25ms per step
-  }
-
-  function fadeIn() {
-    const fadeInterval = setInterval(() => {
-      if (audio.volume < 0.79) {
-        audio.volume = Math.min(0.8, audio.volume + 0.05);
-      } else {
-        audio.volume = 0.8;
-        clearInterval(fadeInterval);
-      }
-    }, 25);
-  }
-  </script>
 
   <div id="footer"></div>
-<script src="../footer.js"></script>
-<script>
-  loadFooter("../footer.html");
-</script>
+<script src="/footer.js"></script>
+<script src="/post.js"></script>
 </body>
 </html>
