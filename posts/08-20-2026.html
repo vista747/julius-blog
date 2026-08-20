@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="/head.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>georgia tech summer program — julius.cool</title>
+  <script>
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1><span class="header-link" onclick="window.location='https://julius.cool'">georgia tech summer program</span></h1>
+  <p>
+    <small>
+      thursday, august 20, 2026 — 13:38<br>
+      track: headache - miss understood (instrumental) — <span id="mute-toggle" class="mute-link">mute</span>
+    </small>
+    </p>
+  <p>
+    this summer, i spent 2 weeks at the georgia tech campus for a music technology summer program. it was very cool, and i met many awesome people during my time there. we got to work on many projects and it gave us a good idea of what the college experience is like. i really enjoyed myself.
+  </p>
+  <p>
+    during the first week, we were introduced to a very cool software called vcv rack. it is essentially a eurorack simulator, which allows users to create synth patches with a huge library of digital eurorack modules. it was very cool, and i really enjoyed using the software. all of us created our own compositions and synth patches using the software. it was very interesting.
+  </p>
+  <p>
+    the second week we used arduinos to control our vcv patches using midi. we designed it and connected different ways to control the patch in interesting ways. some of us 3d printed cases to help build our final instruments. we presented our patches, our compositions, and our instruments at the end of the week.
+  </p>
+  <p>
+    there were two other groups, architecture and industrial design, that worked on their own projects and presented them separately. we shared dorms and common spaces with them. it was pretty cool. i think in total there were around 100 students across all 3 programs.
+  </p>
+  <p>
+    i really enjoyed my time there. it was a really beautiful campus and i really liked almost everything about it. i'd recommend this program for anyone who wants to see what the college experience is like and also wants to do a program with the georgia tech college of design.
+  </p>
+
+  <p><span class="post-link" onclick="window.location='https://julius.cool'">← back</span></p>
+
+  <audio id="music" autoplay loop>
+  <source src="audio/miss_understood.opus" type="audio/opus">
+  </audio>
+
+  <script>
+  const audio = document.getElementById("music");
+  audio.volume = 0.8; // default volume
+
+  // Try autoplay immediately
+  audio.play().catch(() => {
+    // If it fails (autoplay blocked), wait for first click
+    document.body.addEventListener("click", startAudio, { once: true });
+  });
+
+  function startAudio() {
+    audio.play();
+  }
+
+  // Mute/unmute toggle
+  const muteToggle = document.getElementById("mute-toggle");
+  muteToggle.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      muteToggle.textContent = "mute";
+    } else {
+      audio.muted = true;
+      muteToggle.textContent = "unmute";
+    }
+  });
+  </script>
+
+  <div id="footer"></div>
+<script src="../footer.js"></script>
+<script>
+  loadFooter("../footer.html");
+</script>
+</body>
+</html>
