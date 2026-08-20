@@ -421,7 +421,7 @@ small {
   }
 }
 
-@media (max-width: 546px) {
+@media (max-width: 550px) {
   .site-footer {
     left: 1.5rem;
     right: 1.5rem;
@@ -429,4 +429,18 @@ small {
     align-items: flex-start;
     gap: 0.25rem;
   }
+}
+
+.post-image {
+  max-width: 350px;
+  border-radius: 8px;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
