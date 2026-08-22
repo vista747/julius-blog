@@ -51,7 +51,7 @@
   </style>
 </head>
 <body>
-  <video id="tefVideo" loop playsinline preload="auto">
+  <video id="tefVideo" loop playsinline webkit-playsinline preload="auto">
     <source src="assets/teftrack.mp4" type="video/mp4">
   </video>
 
@@ -60,17 +60,12 @@
     const video = document.getElementById('tefVideo');
 
     function startVideo() {
-      if (video.readyState >= 2) {
-        video.muted = false;
-        video.play();
+      video.muted = false;
+      video.play().then(() => {
         body.classList.add('playing');
-      } else {
-        video.addEventListener('loadeddata', () => {
-          video.muted = false;
-          video.play();
-          body.classList.add('playing');
-        }, { once: true });
-      }
+      }).catch((err) => {
+        console.log('Video autoplay blocked:', err);
+      });
     }
 
     document.addEventListener('click', startVideo, { once: true });
