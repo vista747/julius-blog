@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="/head.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>portfolio</title>
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="portfolio-page">
+    <header class="portfolio-header portfolio-intro">
+      <h1>portfolio</h1>
+      <small class="portfolio-meta">by jules cafiso</small>
+    </header>
+
+    <nav class="portfolio-grid">
+      <a class="portfolio-card" href="/portfolio/daisy.html">
+        <img class="thumb" src="/assets/daisythumb.png">
+        <span class="card-title">daisy<small>01</small></span>
+      </a>
+      <a class="portfolio-card" href="/portfolio/fmcraft.html">
+        <video class="thumb" src="/assets/fmcraft.mp4#t=0.5" muted loop playsinline preload="metadata"></video>
+        <span class="card-title">fmcraft<small>02</small></span>
+      </a>
+      <a class="portfolio-card" href="/portfolio/arduino-midi-controller.html">
+        <video class="thumb" src="/assets/arduino.mp4#t=0.5" muted loop playsinline preload="metadata"></video>
+        <span class="card-title">arduino midi controller<small>03</small></span>
+      </a>
+    </nav>
+  </main>
+  <script>
+    document.querySelectorAll(".portfolio-card").forEach(card => {
+      const v = card.querySelector("video");
+      if (!v) return;
+      card.addEventListener("mouseenter", () => v.play().catch(() => {}));
+      card.addEventListener("mouseleave", () => { v.pause(); v.currentTime = 0.5; });
+    });
+  </script>
+</body>
+</html>

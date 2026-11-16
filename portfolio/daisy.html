@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="/head.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>portfolio - daisy</title>
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="portfolio-page">
+    <header class="portfolio-header">
+      <h1>daisy</h1>
+      <small class="portfolio-meta">2026 — design & code — vcv rack — <a style="text-decoration: underline;" class="footer-link" href="https://github.com/vista747/coastal" target="_blank" rel="noopener">source code</a></small>
+    </header>
+
+    <video class="portfolio-video" src="/assets/daisy.mp4" controls playsinline preload="metadata"></video>
+
+    <p class="portfolio-description">
+      After learning how to build synthesizer patches, I wanted to create my own VCV module.
+      For this project, I was inspired by the Grain Delay effect in Ableton Live.
+      I often use Grain Delay in my own music because of the glitchy and textured effect it adds to song elements.
+      I wanted to use this same effect in VCV Rack, but there wasn’t an existing module that manipulated the audio exactly how I wanted, so I decided to use my knowledge of C++ to create it myself.
+      I started by researching how to process audio grains in C++ and how to add multiple audio effects together efficiently.
+      I used a version of Grain Delay recreated in Max for Live as a reference to understand the signal flow and how the grains are processed, which helped me implement similar logic in my C++ module.
+      The module works by continuously recording the input into a circular buffer, then layering multiple short grains that each play back from the buffer at their own pitch and delay.
+      One of the challenges I encountered was ensuring that the grains were synchronized correctly with the buffer, which I solved by carefully managing the read and write pointers and implementing precise timing for grain playback.
+      To demo the finished module, I created an original composition that showcases the beautiful textures my module is able to produce.
+      Working on this project allowed me to combine my interests in modular synthesis and software development, and it was fun to implement my own ideas into a working VCV module.
+    </p>
+
+    <footer class="portfolio-footer">
+      <span></span>
+      <a class="footer-link" href="/portfolio/">all projects</a>
+      <a class="footer-link next" href="/portfolio/fmcraft.html">fmcraft →</a>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="/head.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>portfolio - fmcraft</title>
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="portfolio-page">
+    <header class="portfolio-header">
+      <h1>fmcraft</h1>
+      <small class="portfolio-meta">2026 — code & build — minecraft neoforge 1.21.11 — <a style="text-decoration: underline;" class="footer-link" href="https://github.com/vista747/fmcraft" target="_blank" rel="noopener">source code</a></small> <!-- paste repo url into href; link stays hidden while empty -->
+    </header>
+
+    <video class="portfolio-video" src="/assets/fmcraft.mp4" controls playsinline preload="metadata"></video>
+
+    <p class="portfolio-description">
+      For this project, I built a Last.fm integration Minecraft mod that scrobbles the Minecraft soundtrack to a user’s Last.fm account as it plays in game.
+      I wanted to sharpen my Java skills and learn how to use the Last.fm API so I could apply it to other projects.
+      I started by reading through the Last.fm API documentation to understand how to implement it in my code.
+      Using the NeoForge ModDevGradle MDK for Minecraft 1.21.11, I built and tested the entire mod in the development environment.
+      I also used a local SQLite database to store the song metadata that would be sent to Last.fm as it plays.
+      Then, I implemented Last.fm API helpers to handle authentication, request signing, and communication with the web application.
+      The most challenging part was figuring out how to format the data correctly so that the API would accept it.
+      To let players interact with the mod without leaving Minecraft, I added commands that could be run using the in-game chat.
+      Working on this project showed me that the tools I use to listen to music every day are all things I can build myself. 
+      This realization has inspired me to continue creating tools and projects that make music more personal and interactive.
+    </p>
+
+    <footer class="portfolio-footer">
+      <a class="footer-link prev" href="/portfolio/daisy.html">← daisy</a>
+      <a class="footer-link" href="/portfolio/">all projects</a>
+      <a class="footer-link next" href="/portfolio/arduino-midi-controller.html">arduino midi controller →</a>
+    </footer>
+  </main>
+</body>
+</html>

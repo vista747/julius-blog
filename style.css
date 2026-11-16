@@ -444,3 +444,126 @@ small {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+.portfolio-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.portfolio-header h1 {
+  margin: 0;
+  font-size: clamp(40px, 7vw, 88px);
+  letter-spacing: -0.03em;
+}
+
+.portfolio-meta {
+  display: block;
+  margin-top: 0.6rem;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+}
+
+.portfolio-video {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.portfolio-description {
+  max-width: 62ch;
+  margin: 2rem auto 0;
+  font-size: 18px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.portfolio-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin: 2.5rem auto 0;
+  padding-top: 1rem;
+  max-width: 900px;
+  border-top: 1px solid var(--fg);
+  font-size: 18px;
+  user-select: none;
+}
+
+.portfolio-footer .footer-link {
+  margin-right: 0;
+}
+
+.portfolio-footer .prev { justify-self: start; }
+.portfolio-footer .next { justify-self: end; }
+
+.portfolio-intro {
+  text-align: center;
+  margin: 0 auto 2.5rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-card {
+  display: block;
+  color: var(--fg);
+}
+
+.portfolio-card .thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+  object-fit: cover;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-card:hover .thumb {
+  transform: translateY(-4px);
+}
+
+.portfolio-card .card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--fg);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.portfolio-card .card-title small {
+  font-size: 14px;
+}
+
+.portfolio-card:hover .card-title {
+  color: #00f;
+  border-color: #00f;
+}
+
+.portfolio-card .card-title,
+.portfolio-card .card-title small {
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-meta a[href=""] {
+  display: none;
+}
