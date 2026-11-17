@@ -21,11 +21,11 @@
         <span class="card-title">daisy<small>01</small></span>
       </a>
       <a class="portfolio-card" href="https://julius.cool/portfolio/fmcraft">
-        <video class="thumb" src="/assets/fmcraft.mp4#t=0.5" muted loop playsinline preload="metadata"></video>
+        <video class="thumb" src="/assets/fmcraft.mp4#t=47.8" data-preview="47.8" data-play-from="62.2" muted loop playsinline preload="metadata"></video>
         <span class="card-title">fmcraft<small>02</small></span>
       </a>
       <a class="portfolio-card" href="https://julius.cool/portfolio/g4ry">
-        <video class="thumb" src="/assets/gary.mp4#t=4" muted loop playsinline preload="metadata"></video>
+        <video class="thumb" src="/assets/gary.mp4#t=2" data-preview="2" data-play-from="16" muted loop playsinline preload="metadata"></video>
         <span class="card-title">arduino midi controller<small>03</small></span>
       </a>
     </nav>
@@ -34,8 +34,13 @@
     document.querySelectorAll(".portfolio-card").forEach(card => {
       const v = card.querySelector("video");
       if (!v) return;
-      card.addEventListener("mouseenter", () => v.play().catch(() => {}));
-      card.addEventListener("mouseleave", () => { v.pause(); v.currentTime = 0.5; });
+      const preview = parseFloat(v.dataset.preview ?? 0.5);
+      const playFrom = v.dataset.playFrom;
+      card.addEventListener("mouseenter", () => {
+        if (playFrom !== undefined) v.currentTime = parseFloat(playFrom);
+        v.play().catch(() => {});
+      });
+      card.addEventListener("mouseleave", () => { v.pause(); v.currentTime = preview; });
     });
   </script>
 </body>
